@@ -1,0 +1,46 @@
+[push]
+	default = matching
+[core]
+	trustctime = false
+	editor = vim
+	filemode = false
+[color]
+	ui = true
+[credential]
+	helper = cache --timeout=3600
+[merge]
+	tool = vimdiff
+[mergetool]
+	keeptemporaries = false
+	keepbackups = false
+	prompt = false
+	trustexitcode = false
+[alias]
+	last = log -1 --stat
+	ap = add -p
+	cp = cherry-pick
+	co = checkout
+	cl = clone
+	ci = commit
+    cm = commit -m
+    ca = commit --amend --no-edit
+	br = branch
+	unstage = reset HEAD --
+	rs = reset
+	omit = rm --cached
+	dc = diff --cached
+	dno = diff --name-only
+	dnoc = diff --name-only --cached
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+    lf = ls-files
+    lfo = ls-files --exclude-standard -o
+    st = stash
+    stp = stash pop
+    initial = rev-list --max-parents=0 HEAD
+[user]
+	email = frn.fnts@gmail.com
+	name = Mitsuhiro ETO
+[url "ssh://git@heroku.com/"]
+	insteadOf = https://git.heroku.com/
+[diff]
+	algorithm = histogram
